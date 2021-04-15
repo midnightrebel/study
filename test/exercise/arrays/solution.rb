@@ -1,7 +1,7 @@
 module Exercise
   module Arrays
     class << self
-      def replacemax(array)
+      def replace(array)
         array = Array.new(array)
         i = 0
         max = array[i]
@@ -9,16 +9,18 @@ module Exercise
           if (max < array[i])
             max = array[i]
           end
-          if(array[i] >= 0)
-            array[i] = max
-            array[0] = max
-            array[1] = max
-          end
           i += 1
+        end
+        j = 0
+        while j < array.length do 
+          if (array[j] >= 0)
+            array[j] = max
+          end
+          j += 1
         end
         return array
       end
-     
+
       def search(_array, _query)
         right = _array.length - 1
         left = 0

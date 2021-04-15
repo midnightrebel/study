@@ -6,6 +6,7 @@ class Exercise::ArraysTest < Minitest::Test
   def test_replace
     array = [3, 2, -8, 4, 100, -6, 7, 8, -99]
     new_array = Exercise::Arrays.replace(array)
+
     assert new_array == [100, 100, -8, 100, 100, -6, 100, 100, -99]
   end
 
