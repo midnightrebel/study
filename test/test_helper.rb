@@ -8,6 +8,6 @@ require 'minitest/autorun'
 Coveralls.wear!
 FactoryGirl.reload
 
-class Minitest::Test
-  include FactoryGirl::Syntax::Methods
+class ActiveSupport::TestCase
+  include FactoryBot::Syntax::Methods
 end
